@@ -1,0 +1,487 @@
+/* In CSS we use 'selectors' to target a specific HTML tag for styling */
+/* The asterisk symbol stands for 'all' which will target all HTML tags */
+* {
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+/* When selecting an HTML tag using its ID, we use the '#' symbol */
+/* When selecting an HTML tag using its class, we use the '.' symbol */
+#profile {
+	height: 250px;
+	width: 250px;
+
+	margin: 20px 0 20px;
+/* Resposible for making the img tag circular */
+	border-radius: 50%;
+}
+
+body {
+	background-color: #000000;
+background-attachment: fixed;
+background-size: cover;
+}
+
+#landing {
+	height: 100vh;
+	padding: 0 10%;
+    /* Centers the content vertically using flexbox */
+	display: flex;
+	flex-direction: column; /* Column is equal to Y-Axis or Top-to-Bottm*/
+	justify-content: center;
+	align-items: center;
+}
+
+#landing h1{
+	position: relative;
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+#landing h1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	animation: showRight 1s ease forwards;
+	animation-delay: .1s;
+}
+
+.btn-box{
+	display: flex;
+	justify-content: space-between;
+	width: 345px;
+	height: 50px;
+}
+
+#landing a{
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 100%;
+	border: 2px solid gray;
+	font-size: 15px;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 1px;
+	z-index: 1;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.btn-box a:hover {
+	color: black;
+}
+
+.btn-box a:nth-child(2) {
+	background: transparent;
+	color: white;
+}
+
+.btn-box a:nth-child(2):hover {
+	background: white;
+}
+
+.btn-box a:nth-child(2)::before {
+	background: gray;
+}
+
+.btn-box a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: gray;
+	z-index: -1;
+	transition: .5s;
+}
+
+.btn-box a:hover::before {
+	width: 100%;
+}
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 10%;
+	background-color: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.logo{
+	position: relative;
+	font-size: 25px;
+	color: aliceblue;
+	text-decoration: none;
+	font-weight: 600px;
+}
+
+.logo::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	animation: showRight 1s ease forwards;
+	animation-delay: .4s;
+}
+
+.navbar ul{
+	background-color: transparent;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	text-align: center;
+
+
+}
+.navbar a{
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 35px;
+	transition: .3s;
+	color: white;
+	display: block;
+	text-align: center;
+	padding: 15px;
+}
+.navbar a:hover{
+	color: darkgray;
+}
+.navbar li{
+	float: left;
+}
+
+@keyframes showRight {
+	100% {
+		width: 0;
+	}
+}
+
+.about {
+	width: 100%;
+	padding: 100px 0px;
+	background-color: black;
+}
+
+.about img {
+	height: auto;
+	width: 430px;
+}
+
+.about-text {
+	width: 550px;
+	
+}
+.main {
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.about-text h2{
+	color: aliceblue;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.about-text h5{
+	color: aliceblue;
+	letter-spacing: 2px;
+	font-size: 22px;
+	text-transform: capitalize;
+	margin-bottom: 25px;
+}
+
+.about-text p{
+	color: aqua;
+	letter-spacing: 1px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+
+.about-text .button-one {
+	background-color: transparent;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	transition:  .4s;
+	padding: 13px 30px;
+	border: 2px solid gray;
+	z-index: 1;
+	overflow: hidden;
+	transition: .5s;
+	position: relative;
+}
+
+.about-text .button-one:hover {
+	background-color: transparent;
+	background: gray;
+	color: black;
+	cursor: pointer;
+}
+
+.about-text a:hover {
+	color: black;
+}
+
+.about-text a:nth-child(2) {
+	background: transparent;
+	color: white;
+}
+
+.about-text a:nth-child(2):hover {
+	background: white;
+}
+
+.about-text a:nth-child(2)::before {
+	background: gray;
+}
+
+.about-text a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: gray;
+	z-index: -1;
+	transition: .5s;
+}
+
+.about-text a:hover::before {
+	width: 100%;
+}
+
+
+.contact-me {
+	width: 100%;
+	height: 290px;
+	background: #191919;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.contact-me p {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.contact-me .button-two {
+	background-color: transparent;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	transition:  .4s;
+	padding: 13px 30px;
+	border: 2px solid gray;
+	z-index: 1;
+	overflow: hidden;
+	transition: .5s;
+	position: relative;
+}
+
+.contact-me .button-two:hover {
+	background-color: transparent;
+	background: gray;
+	color: black;
+	cursor: pointer;
+}
+
+.contact-me a:hover {
+	color: black;
+}
+
+.contact-me a:nth-child(2) {
+	background: transparent;
+	color: white;
+}
+
+.contact-me a:nth-child(2):hover {
+	background: white;
+}
+
+.contact-me a:nth-child(2)::before {
+	background: gray;
+}
+
+.contact-me a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: gray;
+	z-index: -1;
+	transition: .5s;
+}
+
+.contact-me a:hover::before {
+	width: 100%;
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background: #101010;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p:nth-child(1) {
+	font-size: 30px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+footer p:nth-child(2) {
+	color: white;
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	line-height: 26px;
+}
+.home-sci {
+	height: 50px;
+	width: 200px;
+	display: flex;
+	justify-content: space-between;	
+	margin: 10px;
+}
+
+.home-sci a{
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: 2px solid gray;
+	border-radius: 50%;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	z-index: 1;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.home-sci a:hover {
+	color: black;
+}
+
+.home-sci a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: gray;
+	z-index: -1;
+	transition: .5s;
+}
+
+.home-sci a:hover::before {
+	width: 100%;
+}
+
+
+
+
+.projects {
+	padding: 50px 0;
+	background-color: #101010;
+	width: 100%;
+  }
+  
+  .projects h2 {
+	color: white;
+	text-align: center;
+	margin-bottom: 50px;
+  }
+  
+  .projects .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+  
+  .projects .card {
+	width: 300px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projects .card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+  }
+  
+  .projects .card-body {
+	padding: 20px;
+	background-color: gray;
+  }
+  
+  .projects .card-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: white;
+  }
+  
+  .projects .card-text {
+	color: white;
+	margin-bottom: 20px;
+  }
+  
+  .projects .btn-primary {
+	background-color: transparent;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .projects .btn-primary:hover {
+	background-color: black;
+  }
